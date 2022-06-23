@@ -4,6 +4,7 @@ jobs:
     docker:
       - image: node:16.0.0
     steps:
+      - checkout
       - run:
           name: The First Step
           command: |
