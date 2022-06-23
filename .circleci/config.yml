@@ -10,5 +10,4 @@ jobs:
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
-            npm i
-            cat package.json
+            npm run test
