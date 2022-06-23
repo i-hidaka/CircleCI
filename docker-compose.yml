@@ -1,0 +1,14 @@
+
+version: "3"
+services:
+  vue-mocha-chai:
+    build: .
+    container_name: vue-mocha-chai
+    ports:
+      - ":8080"
+    volumes:
+      - ./:/src
+    stdin_open: true
+    tty: true
+    working_dir: /src
+    # command: npm run dev
