@@ -2,7 +2,6 @@
   "name": "vue-mocha-chai-circleci",
   "version": "1.0.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "test": "mocha",
     "dev": "nuxt",
