@@ -1,5 +1,6 @@
 version: 2.1
 jobs:
+# コンテナが1つのときはjobs配下にbuild、複数のときは最後にworkflowsで順番を記載する
   Hello-World:
     docker:
       - image: node:16.0.0
@@ -10,8 +11,7 @@ jobs:
           command: |
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
-            npm i
-            
+
   hogehoge:
     docker:
       - image: node:16.0.0
@@ -28,6 +28,10 @@ workflows:
   Example-Workflow:
     jobs:
       - Hello-World
+       - Hold-for-Approval:
+          type: approval
+          requires:
+            - Hello-World
       - hogehoge:
           requires:
             - Hello-World
