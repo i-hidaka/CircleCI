@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build:
+  hogehoge:
     docker:
       - image: node:16.0.0
     steps:
@@ -12,3 +12,4 @@ jobs:
             echo 'This is the delivery pipeline'
             npm i
             npm run test
+          
