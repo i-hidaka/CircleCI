@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-# コンテナが1つのときはjobs配下にbuild、複数のときは最後にworkflowsで順番を記載する
+  # コンテナが1つのときはjobs配下にbuild、複数のときは最後にworkflowsで順番を記載する
   Hello-World:
     docker:
       - image: node:16.0.0
@@ -28,7 +28,7 @@ workflows:
   Example-Workflow:
     jobs:
       - Hello-World
-       - Hold-for-Approval:
+      - Hold-for-Approval:
           type: approval
           requires:
             - Hello-World
