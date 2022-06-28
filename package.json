@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "mocha-webpack test/**.spec.ts",
+    "test": "mocha-webpack --webpack-config test/webpack.config.js test/**.spec.ts",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
