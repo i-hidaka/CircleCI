@@ -4,7 +4,8 @@ import index from "../pages/index.vue";
 
 describe("テスト", () => {
   it("テスト", () => {
-    expect(1 + 1).equal(1);
     const wrapper = shallowMount(index);
+    console.log(wrapper.vm);
+    expect(1 + 1).equal(2);
   });
 });
