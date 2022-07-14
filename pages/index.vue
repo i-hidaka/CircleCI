@@ -2,7 +2,6 @@
   <div @click="onClick" class="test">
     {{ testData }}
     <div>
-      aaa
       <div>aaa</div>
     </div>
   </div>
