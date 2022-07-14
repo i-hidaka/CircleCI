@@ -1,16 +1,20 @@
-const path = require("path");
 const { VueLoaderPlugin } = require("vue-loader");
 module.exports = {
   plugins: [new VueLoaderPlugin()],
   module: {
     rules: [
       {
-        test: /\.vue$/,
-        loader: "vue-loader",
+        test: /\.tsx?$/,
+        loader: "ts-loader",
+        options: {
+          appendTsSuffixTo: [/\.vue$/],
+        },
+        exclude: /node_modules/,
       },
       {
-        test: /\.js$/,
-        loader: "babel-loader",
+        test: /\.vue$/,
+        exclude: /node_modules/,
+        loader: ["vue-loader"],
       },
       {
         test: /\.css$/,

@@ -8,7 +8,8 @@
     "allowJs": true,
     "sourceMap": true,
     "strict": true,
-    "noEmit": true,
+    // "noEmit": true,
+    "outDir": "./build",
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
